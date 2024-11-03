@@ -11,8 +11,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v40.3.4
         with:
-          configurationFile: renovate-config.js
           token: ${{ secrets.RENOVATE_TOKEN }}
+          configurationFile: 'renovate.json'
+
+
+      - name: Verify Go Mod Tidy
+        run: |
+          go mod tidy
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Go module files are not tidy!"
+            exit 1
+          fi
