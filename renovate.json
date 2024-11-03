@@ -8,6 +8,7 @@
     }
   ],
   "labels": ["dependencies", "renovate"],
+  "autodiscoverFilter": ["yexela/renovate-test"],
   "timezone": "UTC",
   "commitMessagePrefix": "chore(deps): ",
   "automerge": false,
