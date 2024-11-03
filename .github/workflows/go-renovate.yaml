@@ -19,6 +19,7 @@ jobs:
           configurationFile: 'renovate.json'
         env:
           LOG_LEVEL: 'debug'
+          RENOVATE_REPOSITORIES: ${{ github.repository }}
 
 
       - name: Verify Go Mod Tidy
