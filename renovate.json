@@ -1,12 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
-  "language": "go",
   "packageRules": [
     {
       "managers": ["gomod"],
-      "enabled": true,
-      "schedule": ["before 3am on Monday"]
+      "enabled": true
     }
   ],
   "labels": ["dependencies", "renovate"],
@@ -15,6 +13,5 @@
   "automerge": false,
   "automergeType": "pr",
   "prCreation": "not-pending",
-  "dependencyDashboard": true,
-  "reviewers": ["team/reviewers"]
+  "dependencyDashboard": true
 }
