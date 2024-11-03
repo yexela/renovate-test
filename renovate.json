@@ -1,13 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": [
+    "config:recommended"
+  ],
   "packageRules": [
     {
-      "managers": ["gomod"],
+      "matchManagers": [
+        "gomod"
+      ],
       "enabled": true
     }
   ],
-  "labels": ["dependencies", "renovate"],
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
   "timezone": "UTC",
   "commitMessagePrefix": "chore(deps): ",
   "automerge": false,
